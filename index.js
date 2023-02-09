@@ -8,8 +8,8 @@ $( document ).ready(function() {
         
         $.get(url, function(data, status){
             location.href=data+'.html'
-            alert(data);
-            alert(status);
+           // alert(data);
+           // alert(status);
         });
           
    })   
