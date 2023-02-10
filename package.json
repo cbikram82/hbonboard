@@ -1,0 +1,24 @@
+{
+  "name": "hbonboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbikram82/hbonboard.git"
+  },
+  "author": "bikram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbikram82/hbonboard/issues"
+  },
+  "homepage": "https://github.com/cbikram82/hbonboard#readme",
+  "dependencies": {
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0"
+  }
+}

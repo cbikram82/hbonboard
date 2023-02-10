@@ -7,9 +7,9 @@ $( document ).ready(function() {
         // var url = "https://www.google.com/?email="+$('#email').val()+'&password='+$('#pwd').val();  
         
         $.get(url, function(data, status){
-            location.href=data+'.html'
-           // alert(data);
-           // alert(status);
+            //location.href=data+'.html'
+            alert(data);
+            alert(status);
         });
           
    })   
