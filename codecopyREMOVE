@@ -1,0 +1,66 @@
+
+// import {createRequire} from 'module';
+// const require = createRequire(import.meta.url);
+
+
+
+//export const handler = async(event) => {
+    // TODO implement
+        
+     //const email = event['queryStringParameters']['email'];
+    //const email = event.queryStringParametersemail;
+   // const pwd = event['queryStringParameters']['password'];
+    //const ret = (Math.floor(Math.random()*10))%2==0?"employee":"hr";
+    
+    // const {Client} = require('pg');
+    
+    // const client = new Client(
+    //     {
+    //       host: 'sbadb-1.c8ikdnliwh3x.us-east-1.rds.amazonaws.com',
+    //       port: 5432,
+    //       user: 'sbapostgres',
+    //       password: 'Ruhi0707#',
+    //       database: 'postgres'
+    //     });
+        
+      // exports.handler = async (event) => {
+      
+      exports.handler = function (event, context,callback) {
+           
+            const email = event['queryStringParameters']['email'];
+            const {Client} = require('pg');
+            const client = new Client(
+        {
+          host: 'sbadb-1.c8ikdnliwh3x.us-east-1.rds.amazonaws.com',
+          port: 5432,
+          user: 'sbapostgres',
+          password: 'Ruhi0707#',
+          database: 'postgres'
+        });
+           
+            try{
+                await client.connect();
+                const res = await client.query("select role from hbuser where username ="+email);
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify(res)
+                };
+            }catch (err){
+                console.log(err);
+                return {
+                    statusCode: 500,
+                    body: JSON.stringify({error: 'User Doesnt exist'})
+                };
+            }finally {
+                await client.end();
+            }
+        };
+    
+    
+    
+    // const response = {
+    //     statusCode: 200,
+    //     body: JSON.stringify(ret)
+    // };
+    // return response;
+//};

@@ -1,1 +1,78 @@
-EMPLOYEE
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add some styles for the UI */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .form-section {
+        width: 500px;
+        background-color: #f2f2f2;
+        padding: 40px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"] {
+        padding: 10px;
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Onboarding</h1>
+      <div class="form-section">
+        <form>
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" required>
+
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+
+          <label for="position">Position:</label>
+          <input type="text" id="position" required>
+
+          <label for="start_date">Start Date:</label>
+          <input type="date" id="start_date" required>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
