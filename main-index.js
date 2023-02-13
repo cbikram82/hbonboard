@@ -3,7 +3,7 @@
 $( document ).ready(function() {
     $('#btn').on('click', function(event) {
         
-        alert("working!!"+$('#email').val());
+        //alert("working!!"+$('#email').val());
        // const data = import {dbq.dbquery($('#email').val())};
        const data = "employee";
        location.href=data+'.html';
