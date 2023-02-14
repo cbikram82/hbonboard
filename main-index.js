@@ -1,4 +1,6 @@
 
+//const {db} = require('/database.js');
+
 
 $( document ).ready(function() {
     $('#btn').on('click', function(event) {

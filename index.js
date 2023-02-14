@@ -7,20 +7,25 @@ const client = new Client({
     password: 'Ruhi0707#',
     database: 'postgres',
 });
-
+if(client.connection._events != null)
 client.connect()
-  .then(() => console.log('Connected to the database'))
-  .catch(err => console.error('Error connecting to the database', err.stack));
+ //client.connect()
+    .then(() => console.log('Connected to the database'))
+    .catch(err => console.error('Error connecting to the database', err.stack));
 
+console.log("in the db now....");
 
-  client.query('SELECT * FROM hbuser', (err, res) => {
+  var result = client.query('SELECT * FROM hbuser', (err, res) => {
     if (err) {
+      console.log("inside the query err block....");
       console.error(err.stack);
     } else {
-      console.log(res.rows);
+     // console.log(res);
     }
   });
+  console.log("printing result....");
+  console.log(result);
 
-  client.end()
+   client.end()
   .then(() => console.log('Connection closed....'))
   .catch(err => console.error('Error closing the connection', err.stack));
