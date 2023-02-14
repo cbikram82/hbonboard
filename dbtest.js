@@ -15,25 +15,25 @@ async function dbquery(usr) {
     .then(() => console.log("connected"))
     .catch((err) => console.error("connection error", err.stack));
 
-  //   await client.query(
-  //     "SELECT role FROM hbuser WHERE username = $1",
-  //     [usr],
-  //     (err, res) => {
-  //       if (!err) {
-  //         console.log("result is " + res.rows);
-  //         x = res.rows[0].role;
-  //         console.log("x=" + x);
-  //       } else {
-  //         console.log(err.message);
-  //       }
-  //       client.end((err) => {
-  //         console.log("client has disconnected");
-  //         if (err) {
-  //           console.log("error during disconnection", err.stack);
-  //         }
-  //       });
-  //     }
-  //   );
+    // await client.query(
+    //   "SELECT role FROM hbuser WHERE username = $1",
+    //   [usr],
+    //   (err, res) => {
+    //     if (!err) {
+    //       console.log("result is " + res.rows);
+    //       x = res.rows[0].role;
+    //       console.log("x=" + x);
+    //     } else {
+    //       console.log(err.message);
+    //     }
+    //     client.end((err) => {
+    //       console.log("client has disconnected");
+    //       if (err) {
+    //         console.log("error during disconnection", err.stack);
+    //       }
+    //     });
+    //   }
+    // );
 
   //var result = client.query()
 
@@ -65,6 +65,12 @@ async function dbquery(usr) {
   } catch (err) {
     console.log(err.stack);
   }
+  client.end((err) => {
+    console.log("client has disconnected");
+    if (err) {
+      console.log("error during disconnection", err.stack);
+    }
+  });
 
   //console.log("returning results" + x);
   
