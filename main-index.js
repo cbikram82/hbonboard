@@ -3,11 +3,16 @@
 $(document).ready(function () {
   $("#btn").on("click", function (event) {
     alert("working!!" + $("#email").val());
-  
-    var email = $.get("http://localhost:9229/user/"+$('#email').val(),  function(data, status){
-            location.href=email+'.html'
-            // alert(data);
-        alert(status);
+    // const data = import {dbq.dbquery($('#email').val())};
+    //"http://localhost:9229/user/"
+    //console.log(res1);
+    var email = $.get(
+      "http://localhost:9229/" +
+        $("#email").val(),
+      function (data, status) {
+        location.href = data + ".html";
+        //    // alert(data);
+            alert(status);
       }
     );
     // const data = "employee";
