@@ -12,7 +12,7 @@ $(document).ready(function () {
       function (data, status) {
         location.href = data + ".html";
         //    // alert(data);
-            alert(status);
+            //alert(status);
       }
     );
     // const data = "employee";
