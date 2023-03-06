@@ -3,17 +3,11 @@
 $(document).ready(function () {
   $("#btn").on("click", function (event) {
     alert("working!!" + $("#email").val());
-    // const data = import {dbq.dbquery($('#email').val())};
-    //"http://localhost:9229/user/"
-    //https://r5v1ktsk87.execute-api.us-east-1.amazonaws.com/dev/
-    //console.log(res1);
-    var email = $.get(
-      "http://localhost:9229/user/" +
-        $("#email").val(),
-      function (data, status) {
-        location.href = data + ".html";
-        //    // alert(data);
-            alert(status);
+  
+    var email = $.get("http://localhost:9229/user/"+$('#email').val(),  function(data, status){
+            location.href=data+'.html'
+            // alert(data);
+        alert(status);
       }
     );
     // const data = "employee";
