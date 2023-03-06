@@ -14,11 +14,12 @@ app.get("/user/:id", (req, res) => {
     res.send(r.role);
   });
   console.log("here is the result : " + result);
-  //res.send(result);
+  res.send(result);
 });
 
-//app.listen(9229, () => {
-//   console.log('Express app listening on port 9229');
-//});
+app.listen(9229, () => {
+  console.log('Express app listening on port 9229');
+});
 
-module.exports = app;
+// module.exports = app;
+

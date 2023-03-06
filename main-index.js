@@ -5,9 +5,10 @@ $(document).ready(function () {
     alert("working!!" + $("#email").val());
     // const data = import {dbq.dbquery($('#email').val())};
     //"http://localhost:9229/user/"
+    //https://r5v1ktsk87.execute-api.us-east-1.amazonaws.com/dev/
     //console.log(res1);
     var email = $.get(
-      "https://r5v1ktsk87.execute-api.us-east-1.amazonaws.com/dev/" +
+      "http://localhost:9229/user/" +
         $("#email").val(),
       function (data, status) {
         location.href = data + ".html";
