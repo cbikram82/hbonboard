@@ -14,7 +14,7 @@ app.get("/user/:id", (req, res) => {
     res.send(r.role);
   });
   console.log("here is the result : " + result);
-  res.send(result);
+  //res.send(result);
 });
 
 app.listen(9229, () => {
