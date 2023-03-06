@@ -7,7 +7,7 @@ const { apifunct } = require("./dbtest.js");
 const app = express();
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get("/user/:id", (req, res) => {
   const request = req.params.id;
   var result = apifunct(request).then((r) => {
     console.log("r=" + r.role);

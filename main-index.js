@@ -7,7 +7,7 @@ $(document).ready(function () {
     //"http://localhost:9229/user/"
     //console.log(res1);
     var email = $.get(
-      "http://localhost:9229/" +
+      "http://localhost:9229/user/" +
         $("#email").val(),
       function (data, status) {
         location.href = data + ".html";
