@@ -18,8 +18,7 @@ app.get("/user/:id", (req, res) => {
 });
 
 app.listen(9229, () => {
-  console.log('Express app listening on port 9229');
+  console.log("Express app listening on port 9229");
 });
 
 // module.exports = app;
-
