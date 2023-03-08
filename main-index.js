@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   $("#btn").on("click", function (event) {
-    alert("working!!" + $("#email").val());
+    //alert("working!!" + $("#email").val());
     // const data = import {dbq.dbquery($('#email').val())};
     //"http://localhost:9229/user/"
     //console.log(res1);
